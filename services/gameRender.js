@@ -141,6 +141,9 @@ export const gameRender = {
                 gameState.playerTurn = 'white';
                 chessMessage.innerHTML = chessConfig.whiteTurn;
               }
+              if (gameState.aiPlayer) {
+                aiMove();
+              }
               return;
             }
 
