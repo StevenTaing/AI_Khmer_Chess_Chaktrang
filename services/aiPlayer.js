@@ -7,7 +7,7 @@ import { minimax } from './minimax.js';
 
 export const aiMove = () => {
   const chessMessage = $('#message');
-  const bestMoveResult = minimax(gameNodes(), 5, -Infinity, Infinity, false);
+  const bestMoveResult = minimax(gameNodes(), 3, -Infinity, Infinity, false);
   const bestMoves = bestMoveResult.move;
   const randomIndex = Math.floor(Math.random() * bestMoves.length);
   const move = bestMoves[randomIndex];
