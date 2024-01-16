@@ -38,8 +38,8 @@ export const aiMove = () => {
   }
 
   if (
-    (move.piece === 'pawn' && move.fromCell.substring(1, 2) == 8) ||
-    (move.piece === 'pawn' && move.fromCell.substring(1, 2) == 1)
+    (move.piece === 'pawn' && move.cell.substring(1, 2) == 8) ||
+    (move.piece === 'pawn' && move.cell.substring(1, 2) == 1)
   ) {
     destinationPosition.style.backgroundImage = `url('data:image/svg+xml,${
       pieceImages[move.player + '_pawn_pro']
