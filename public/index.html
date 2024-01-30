@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khmer Chaktrang</title>
+    <link href="./images/icon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./game.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <marquee>
+          <h1>
+            Khmer<img src="./images/icon.png" style="height: 3rem" />Chaktrang
+          </h1></marquee
+        >
+      </header>
+      <main>
+        <section>
+          <div id="board"></div>
+        </section>
+        <aside>
+          <h1 id="message">~White First!~</h1>
+          <button id="new-game" onclick="location.reload()">New Game</button>
+          <button id="switch-player">Play with Machine</button>
+          <button id="how-play" onclick="location.href='./how.html'">
+            How to Play
+          </button>
+          <fieldset>
+            <legend>Options:</legend>
+            <input
+              type="checkbox"
+              id="cell-text"
+              name="cell-text"
+              value="false"
+            />
+            <label for="cell-text"> Show Cell Text</label><br />
+            <input
+              type="checkbox"
+              id="board-text"
+              name="board-text"
+              value="false"
+            />
+            <label for="board-text"> Show Board Text</label><br />
+            <input
+              type="checkbox"
+              id="upside-down"
+              name="upside-down"
+              value="false"
+            />
+            <label for="upside-down"> Board Upside Down</label><br />
+            <label for="pet-select">Choose level: </label>
+            <select name="level" id="level">
+              <option value="3">--Easy--</option>
+              <option value="4">--Hard--</option>
+            </select>
+          </fieldset>
+          <div style="height: 100%"></div>
+          <p>
+            <center>
+              Heangleng TAING © 2024
+              <br />
+              Version 1.0
+            </center>
+          </p>
+        </aside>
+      </main>
+      <audio id="sound-click">
+        <source
+          src="https://cdn.freesound.org/previews/630/630487_10616645-lq.mp3"
+          type="audio/mp3"
+        />
+        Your browser does not support the audio element.
+      </audio>
+      <audio id="sound-won">
+        <source
+          src="https://cdn.freesound.org/previews/275/275104_4631294-lq.mp3"
+          type="audio/mp3"
+        />
+      </audio>
+    </div>
+  </body>
+</html>

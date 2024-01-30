@@ -1,0 +1,14 @@
+{
+  "name": "chatrang_ai",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc --watch",
+    "dev": "npx live-server public"
+  },
+  "keywords": [],
+  "author": "Heangleng (Steven) TAING",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  }
+}
