@@ -22,19 +22,20 @@ export const makeMove = (
   gameState.pieceClick = false;
 
   if ($$$(destinationPosition, 'piece') == 'king') {
-    gameState.gameOver = true;
-    const wonSound = $('#sound-won') as HTMLAudioElement;
-    wonSound.play();
+    destinationPosition.style.backgroundImage = `url('${pieceImage}')`;
+    destinationPosition.setAttribute('player', originPayer);
+    destinationPosition.setAttribute('piece', originPiece);
 
-    if (gameState.playerTurn == 'white') {
+    if (gameState.playerTurn === 'white') {
       message.innerHTML = chessConfig.whiteWon;
     } else {
       message.innerHTML = chessConfig.blackWon;
     }
 
-    destinationPosition.style.backgroundImage = `url('${pieceImage}')`;
-    destinationPosition.setAttribute('player', originPayer);
-    destinationPosition.setAttribute('piece', originPiece);
+    gameState.gameOver = true;
+    const wonSound = $('#sound-won') as HTMLAudioElement;
+    wonSound.play();
+
     return;
   }
 

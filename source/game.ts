@@ -128,11 +128,11 @@ const addCellListener = () => {
             destinationCell
           );
           clearSection();
+          if (gameState.aiPlayer) {
+            aiMove();
+          }
         }
-
-        if (gameState.aiPlayer && gameState.playerTurn !== 'black') {
-          aiMove();
-        }
+        return;
       }
     });
   });

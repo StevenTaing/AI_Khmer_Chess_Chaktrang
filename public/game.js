@@ -103,10 +103,11 @@ const addCellListener = () => {
                 if (gameState.possibleMove.includes(destinationCell)) {
                     makeMove(gameState.selection.cell, gameState.selection.player, gameState.selection.piece, destinationCell);
                     clearSection();
+                    if (gameState.aiPlayer) {
+                        aiMove();
+                    }
                 }
-                if (gameState.aiPlayer && gameState.playerTurn !== 'black') {
-                    aiMove();
-                }
+                return;
             }
         });
     });
