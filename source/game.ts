@@ -130,7 +130,7 @@ const addCellListener = () => {
           clearSection();
         }
 
-        if (gameState.aiPlayer) {
+        if (gameState.aiPlayer && gameState.playerTurn !== 'black') {
           aiMove();
         }
       }
